@@ -1,3 +1,78 @@
 body {
   background-color: #F0FFF5;
 }
+/* header {
+  position: sticky;
+  left: 2rem;
+  top: 2rem;
+  right: 2rem;
+  z-index: 999; 
+}*/
+header,
+header ul  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav {
+  
+}
+header ul li {
+  list-style-type: none;
+  margin-left: 2rem;
+}
+.hero-section {
+  background-color: #fff;
+  margin: 5rem;
+  position: relative;
+  height: 22rem;
+}
+
+.hero-section img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: -4rem;
+}
+.hero-section h1 {
+  position: absolute;
+  bottom: -2.5rem;
+}
+.hero-section h2 {
+  position: absolute;
+  bottom: -5rem;
+}
+.content-area {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+}
+.intro {
+  gap: 4rem;
+}
+.more {
+  gap: 2rem;
+}
+.intro,
+.more {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.projects h1 {
+  text-align: center;
+  padding-top: 4rem;
+}
+.p-container {
+    display: flex;
+  flex-wrap: wrap;         /* allows wrapping into multiple rows */
+  gap: 10px;
+  padding: 2rem 5rem;
+}
+.project-box {
+  background-color: #fff;
+  height: 20rem;
+  min-width: 20rem;
+  flex: 1 1 45%; 
+  
+}
