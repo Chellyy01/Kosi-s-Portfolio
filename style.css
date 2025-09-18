@@ -1,31 +1,33 @@
 body {
   background-color: #F0FFF5;
 }
-/* header {
-  position: sticky;
-  left: 2rem;
-  top: 2rem;
-  right: 2rem;
-  z-index: 999; 
-}*/
+ header {
+  padding: 0 6rem;
+}
 header,
 header ul  {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.nav {
-  
+.nav a {
+  text-decoration: none;
+  color: #000;
 }
 header ul li {
   list-style-type: none;
   margin-left: 2rem;
 }
+.logo {
+  font-size: 1.5rem;
+  font-family: Irish Grover;
+}
 .hero-section {
-  background-color: #fff;
+  background-color: #f7ece6;
   margin: 5rem;
   position: relative;
   height: 22rem;
+  border-top-left-radius: 12rem;
 }
 
 .hero-section img {
@@ -36,19 +38,37 @@ header ul li {
 }
 .hero-section h1 {
   position: absolute;
-  bottom: -2.5rem;
+  bottom: -6rem;
+  font-size: 5rem;
+  font-family: serif;
+}
+.kosi span {
+  background: linear-gradient(to top, black 0%, black 40%, white 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 .hero-section h2 {
   position: absolute;
-  bottom: -5rem;
+  bottom: -8rem;
+  font-size: 3rem;
+  font-family: cursive;
+  font-weight: 200;
 }
+
 .content-area {
   display: flex;
   justify-content: space-between;
   padding: 2rem 5rem;
+  gap: 5rem;
 }
 .intro {
   gap: 4rem;
+  font-size: 2.5rem;
+}
+.worked {
+  font-size: 2.8rem;
 }
 .more {
   gap: 2rem;
@@ -59,9 +79,19 @@ header ul li {
   display: flex;
   flex-direction: column;
 }
+.more p, .items span {
+  font-size: 1.8rem;
+}
+.items {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1.5rem;
+}
 .projects h1 {
   text-align: center;
   padding-top: 4rem;
+  font-size: 3rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .p-container {
     display: flex;
@@ -74,5 +104,145 @@ header ul li {
   height: 20rem;
   min-width: 20rem;
   flex: 1 1 45%; 
+  align-items: center;
+  background-image: url("images/Shadow.png"); /* change path as needed */
+  background-size: cover;     /* makes image cover the container */
+  background-position: center;/* centers the image */
+  background-repeat: no-repeat;
+}
+.box1 {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  
+}
+.p-right { 
+  display: flex; 
+  margin-top: 1rem;
+}
+.p-left {
+  align-self: start;
+  margin-top: 3rem;
+}
+.para {
+  width: 10.25rem;
+  height: 3rem;
+  font-size: 0.789rem;
+  margin-bottom: 4rem;
+}
+.tool p {
+  font-size: 0.57rem;
+}
+.phone {
+  width: 10.375rem; 
+  height: 18.75rem; 
+  transform: rotate(11deg);
+}
+.phone1 {
+  width: 9.625rem;
+  height: 18.25rem;
+  margin-left: -70px;
+  margin-right: -70px;
+  transform: none;
+}
+.phone2 {
+  transform: rotate(-9.16deg);
+}
+.box2 {
+  gap: 2rem;
+}
+.box2-img{
+  height: 16.25rem;
+}
+.tool2 {
+  margin-top: 1rem;
+}
+
+.hands{
+  width: 30.42rem;
+  height: 19.15rem;
+  margin-right: -6rem;
+}
+.box-kona {
+  position: relative;
+}
+.kona {
+  position: absolute;   /* take it out of normal flow */
+  top: 0;               /* adjust as needed */
+  left: 3rem;              /* adjust as needed */
+  z-index: 2;           /* ensure it sits above */
+}
+.kona .para {
+  font-size: 1.19rem;
+}
+.kona-img {
+  position: relative;
+  z-index: 1;
+}
+.project-scaf {
+  background-color: #2D2D2D;
+}
+.box-scaf {
+  display: flex; 
+  position: relative;
+  
+}
+.scaf {
+  position: absolute;
+  top: 5.44rem;
+  left: 3.19rem;
+}
+.scaf-p {
+  font-size: .8rem;
+  margin-bottom: 0;
+  color: white;
+}
+.lia {
+  font-size: .5rem;
+  margin-top: 0;
+  color: #C96B37;
+}
+.scaff-img {
+  width: 5rem;
+  height: 3rem;
+  position: absolute;
+  top: 4.25rem;       /* 68px in rem */
+  left: 15.56rem;
+}
+.scaf-tool {
+  margin-top: 3rem;
+  color: white;
+}
+.footer-color {
+  background-color: black;
+  margin-bottom: 5rem;
+}
+.footer {
+  text-align: center;          /* centers text & icons inside */
+  
+}
+.footer h1 {
+  color: white;
+  padding-top: 3rem;
+  font-size: 3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;                   /* space between icons */
+  margin: 1rem 0;
+}
+footer a {
+  color: white;
+}
+.resume-link {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+  padding-bottom: 1rem;
+}
+.resume-link a {
+  text-decoration: none;   /* removes the underline */
   
 }
