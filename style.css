@@ -1,3 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-color: #F0FFF5;
 }
@@ -8,50 +17,75 @@ body {
   right: 2rem;
   z-index: 999; 
 }*/
+header {
+  padding: 5rem 10rem;
+}
+.logo {
+  font: 400 3.0rem 'Irish Grover', sans-serif;
+}
 header,
 header ul  {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .nav {
   
 }
 header ul li {
   list-style-type: none;
   margin-left: 2rem;
+  font:  700 2.5rem 'Inria Sans', sans-serif;
+}
+header ul li a {
+  text-decoration: none;
+  color: #000;
 }
 .hero-section {
   background-color: #fff;
-  margin: 5rem;
   position: relative;
-  height: 22rem;
+  min-width: 12.40rem;
+  height: 36.3rem;
+  border-top-left-radius: 18.15rem;
+  border-top-right-radius: 3.0rem;
+  margin: 5rem 10rem;
 }
 
 .hero-section img {
   position: absolute;
   left: 0;
   bottom: 0;
-  top: -4rem;
 }
 .hero-section h1 {
+  font: 400 9.6rem 'Irish Grover', sans-serif;
   position: absolute;
-  bottom: -2.5rem;
+  bottom: -6rem;
 }
 .hero-section h2 {
   position: absolute;
-  bottom: -5rem;
+  top: 40.3rem;
+  font: 400 7rem 'Instrument Serif', sans-serif;
 }
 .content-area {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 5rem;
+  padding: 15rem 10rem;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 6rem;
+
 }
 .intro {
-  gap: 4rem;
+  gap: 20rem;
+  /* justify-content: space-between; */
+  font: 400 4rem 'Inria Sans', sans-serif;
+  box-sizing: border-box;
+  line-height: 100%;
 }
 .more {
-  gap: 2rem;
+  gap: 5rem;
+  font: 400 2.8rem 'Instrument Sans', sans-serif;
 }
 .intro,
 .more {
@@ -59,20 +93,89 @@ header ul li {
   display: flex;
   flex-direction: column;
 }
+.listItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+}
+.items {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
 .projects h1 {
   text-align: center;
   padding-top: 4rem;
+  font: 400 7rem 'Instrument Serif', sans-serif;
 }
 .p-container {
-    display: flex;
-  flex-wrap: wrap;         /* allows wrapping into multiple rows */
+  display: flex;
+  flex-wrap: wrap;         
   gap: 10px;
-  padding: 2rem 5rem;
+  padding: 2rem 10rem;
+  /* width: 100%; */
+  box-sizing: border-box;
 }
 .project-box {
   background-color: #fff;
-  height: 20rem;
-  min-width: 20rem;
+  height: 40rem;
+  /* min-width: 60.6rem; */
+  border-radius: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   flex: 1 1 45%; 
-  
+  padding: 10rem 5rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.p-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.p-up {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font: 400 1.26rem 'Questrial', sans-serif;
+  line-height: 130%;
+  max-width: 16.4rem;
+}
+
+.p-down {
+ font: 400 0.9rem 'Questrial', sans-serif;
+  line-height: 130%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.p-right {
+ width: 100%;
+  box-sizing: border-box;
+}
+.group58 {
+  position: absolute;
+  top: 10rem;
+  left: 22.47rem;
+  transform: rotate(-11deg);
+  z-index: 10;
+}
+.group57 {
+  position: absolute;
+  top: 10rem;
+  left: 34.7rem;
+  transform: rotate(0deg);
+  z-index: 10000;
+}
+.group56 {
+  position: absolute;
+  top: 10rem;
+  right: 43.25rem;
+  transform: rotate(9.16deg);
+  z-index: 10;
 }
