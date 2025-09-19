@@ -1,47 +1,99 @@
 body {
   background-color: #F0FFF5;
 }
- header {
+ /* Base (Desktop / Large screens) */
+header {
   padding: 0 6rem;
-}
-header,
-header ul  {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* replaces margin-left for cleaner spacing */
+}
+
+header ul li {
+  list-style-type: none;
+}
+
 .nav a {
   text-decoration: none;
   color: #000;
 }
-header ul li {
-  list-style-type: none;
-  margin-left: 2rem;
-}
+
 .logo {
   font-size: 1.5rem;
-  font-family: Irish Grover;
+  font-family: 'Irish Grover', cursive;
 }
+
+/* --- Tablet screens --- */
+@media (max-width: 1024px) {
+  header {
+    padding: 0 2rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  header ul {
+    gap: 1.2rem;
+  }
+}
+
+/* --- Mobile screens --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    width: 100%;
+  }
+  header ul li {
+    margin-left: 0;
+  }
+}
+
 .hero-section {
   background-color: #f7ece6;
   margin: 5rem;
   position: relative;
   height: 22rem;
   border-top-left-radius: 12rem;
+ 
 }
 
+/* Hero Image */
 .hero-section img {
   position: absolute;
   left: 0;
   bottom: 0;
   top: -4rem;
+  max-width: 100%;
+  height: auto;
 }
+
+/* Main Heading */
 .hero-section h1 {
   position: absolute;
   bottom: -6rem;
   font-size: 5rem;
   font-family: serif;
+  width: 100%;
+  line-height: 1.2;
 }
+
+/* Gradient Span */
 .kosi span {
   background: linear-gradient(to top, black 0%, black 40%, white 100%);
   -webkit-background-clip: text;
@@ -49,200 +101,619 @@ header ul li {
   background-clip: text;
   color: transparent;
 }
+
+/* Subheading */
 .hero-section h2 {
   position: absolute;
   bottom: -8rem;
   font-size: 3rem;
   font-family: cursive;
   font-weight: 200;
+  width: 100%;
 }
 
+/* ---------------- Responsiveness ---------------- */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1137px) {
+  .hero-section {
+    margin: 3rem 2rem;
+    height: 18rem;
+    border-top-left-radius: 8rem;
+  }
+  .hero-section img {
+  height: 22rem;
+}
+  .hero-section h1 {
+    font-size: 3.5rem;
+    bottom: -4rem;
+  }
+  .hero-section h2 {
+    font-size: 2rem;
+    bottom: -6rem;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .hero-section {
+    margin: 2rem 1rem;
+    height: auto; /* adjusts height to content */
+    border-top-left-radius: 5rem;
+    padding: 2rem 1rem;
+  }
+  .hero-section img {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    display: block;
+  }
+  .hero-section h1 {
+    position: relative;
+    bottom: 0;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+  .hero-section h2 {
+    position: relative;
+    bottom: 0;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 394px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+}
 .content-area {
   display: flex;
   justify-content: space-between;
   padding: 2rem 5rem;
   gap: 5rem;
 }
+
 .intro {
-  gap: 4rem;
-  font-size: 2.5rem;
-}
-.worked {
-  font-size: 2.8rem;
-}
-.more {
   gap: 2rem;
-}
-.intro,
-.more {
-  width: 50%;
+  font-size: 2.5rem;
   display: flex;
   flex-direction: column;
 }
-.more p, .items span {
+
+.worked {
+  font-size: 2.8rem;
+}
+
+.more {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro,
+.more {
+  width: 50%; /* ✅ Always 2 columns by default */
+}
+
+.more p,
+.items span {
   font-size: 1.8rem;
 }
+
 .items {
   display: flex;
   gap: 2rem;
   padding-top: 1.5rem;
+  align-items: center;
 }
+
+/* 📱 Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .content-area {
+    flex-direction: column;
+    padding: 2rem 3rem;
+    gap: 3rem;
+  }
+
+  .intro,
+  .more {
+    width: 100%; /* ✅ Full width when stacked */
+  }
+
+  /* ✅ Move .worked below .more */
+  .more {
+    order: 1;
+  }
+
+  .worked {
+    order: 2; 
+    align-self: flex-start; /* Keep it aligned left */
+    font-size: 2.2rem;
+    margin-top: 1rem;
+  }
+
+  .intro {
+    order: 0;
+    font-size: 2rem;
+  }
+
+  .more p,
+  .items span {
+    font-size: 1.6rem;
+  }
+}
+
+/* 📱 Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .content-area {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .intro {
+    font-size: 1.8rem;
+  }
+
+  .worked {
+    font-size: 2rem;
+  }
+
+  .more p,
+  .items span {
+    font-size: 1.4rem;
+  }
+
+  .items {
+    gap: 1rem;
+  }
+}
+
+/* 📱 Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .intro {
+    font-size: 1.6rem;
+  }
+
+  .worked {
+    font-size: 1.8rem;
+  }
+
+  .more p,
+  .items span {
+    font-size: 1.2rem;
+  }
+
+  .content-area {
+    padding: 1.5rem;
+  }
+}
+
 .projects h1 {
   text-align: center;
-  padding-top: 4rem;
-  font-size: 3rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 4rem;
 }
 .p-container {
-    display: flex;
+  display: flex;
   flex-wrap: wrap;         /* allows wrapping into multiple rows */
-  gap: 10px;
+  gap: 1rem;
   padding: 2rem 5rem;
 }
+
 .project-box {
   background-color: #fff;
   height: 20rem;
-  min-width: 20rem;
-  flex: 1 1 45%; 
+  min-width: 18rem;
+  flex: 1 1 45%;           /* two columns by default */
+  display: flex;
+  justify-content: center;
   align-items: center;
   background-image: url("images/Shadow.png"); /* change path as needed */
-  background-size: cover;     /* makes image cover the container */
-  background-position: center;/* centers the image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Inside content boxes */
 .box1 {
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  
 }
+
 .p-right { 
   display: flex; 
   margin-top: 1rem;
 }
+
 .p-left {
   align-self: start;
   margin-top: 3rem;
 }
+
 .para {
   width: 10.25rem;
-  height: 3rem;
-  font-size: 0.789rem;
-  margin-bottom: 4rem;
+  height: auto;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
 }
+
 .tool p {
-  font-size: 0.57rem;
+  font-size: 0.8rem;
 }
+
 .phone {
-  width: 10.375rem; 
-  height: 18.75rem; 
+  width: 10rem; 
+  height: auto;
   transform: rotate(11deg);
 }
+
 .phone1 {
-  width: 9.625rem;
-  height: 18.25rem;
-  margin-left: -70px;
-  margin-right: -70px;
+  width: 9rem;
+  height: auto;
+  margin: 0 -3rem;
   transform: none;
 }
+
 .phone2 {
-  transform: rotate(-9.16deg);
+  transform: rotate(-9deg);
 }
+
 .box2 {
   gap: 2rem;
 }
-.box2-img{
-  height: 16.25rem;
+
+.box2-img {
+  height: 16rem;
+  width: auto;
 }
+
 .tool2 {
   margin-top: 1rem;
 }
 
-.hands{
-  width: 30.42rem;
-  height: 19.15rem;
+.hands {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
   margin-right: -6rem;
 }
+
 .box-kona {
   position: relative;
 }
+
 .kona {
-  position: absolute;   /* take it out of normal flow */
-  top: 0;               /* adjust as needed */
-  left: 3rem;              /* adjust as needed */
-  z-index: 2;           /* ensure it sits above */
+  position: absolute;
+  top: 0;
+  left: -3rem;
+  z-index: 2;
 }
+
 .kona .para {
-  font-size: 1.19rem;
+  font-size: 1.2rem;
 }
+
 .kona-img {
   position: relative;
   z-index: 1;
 }
+
 .project-scaf {
   background-color: #2D2D2D;
-}
-.box-scaf {
-  display: flex; 
   position: relative;
-  
+  align-items: center;
 }
+
+.box-scaf {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
 .scaf {
   position: absolute;
-  top: 5.44rem;
-  left: 3.19rem;
+  top: 5.4rem;
+  left: 3rem;
 }
+
 .scaf-p {
-  font-size: .8rem;
+  font-size: 0.9rem;
   margin-bottom: 0;
   color: white;
 }
+
 .lia {
-  font-size: .5rem;
+  font-size: 0.7rem;
   margin-top: 0;
   color: #C96B37;
 }
+
 .scaff-img {
   width: 5rem;
-  height: 3rem;
+  height: auto;
   position: absolute;
-  top: 4.25rem;       /* 68px in rem */
-  left: 15.56rem;
+  top: 4.25rem;
+  left: 15.5rem;
 }
+
 .scaf-tool {
   margin-top: 3rem;
   color: white;
 }
+
+@media (max-width: 1464px) {
+  .p-container {
+    gap: 1.5rem;
+  }
+  .project-box {
+    flex: 1 1 100%;   /* stack to one per row */
+    width: 50rem;
+  }
+  .kona {
+    left: -3rem;
+  }
+
+
+}
+/* 📱 Tablets (≤1024px) */
+@media (max-width: 1174px) {
+  .p-container {
+    padding: 2rem 3rem;
+    gap: 1.5rem;
+  }
+
+
+  .para {
+    font-size: 0.8rem;
+  }
+
+  .kona {
+    left: -3rem;
+  }
+
+  .hands {
+    margin-right: 0;
+  }
+}
+
+/* 📱 Mobile (≤768px) */
+@media (max-width: 768px) {
+  .projects h1 {
+    padding-left: 2rem;
+  }
+  .p-container {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .project-box {
+    flex: 1 1 100%;
+    height: 20rem;
+    min-height: 12rem;
+  }
+
+  .phone, .phone1, .phone2 {
+    width: 7rem;
+  }
+
+  
+
+  .para {
+    font-size: 1rem;
+  }
+
+  
+}
+
+/* 📱 Small phones (≤480px) */
+@media (max-width: 550px) {
+  .p-container {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .project-box {
+    min-width: 100%;
+    min-height: 10rem;
+  }
+
+  .box1{
+    padding-left: 3rem;
+  }
+
+  .para {
+    font-size: 1rem;
+  }
+
+  .p-right {
+    padding-right: 1rem;
+  }
+  .phone {
+    width: 6rem;
+  }
+  .small {
+    width: 8rem;
+  }
+  .box2-img {
+    height: 9rem;
+    width: 6rem;
+  }
+  .title-icon img {
+    width: 5rem;
+  }
+  .hands {
+    width: 15rem;
+    margin-right: -4rem;
+  }
+  .kona {
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+  .kona .para {
+    font-size: 1rem;
+  }
+  .tool {
+    margin-top: -1rem;
+  }
+  
+  .scaf-p {
+    font-size: 0.7rem;
+  }
+
+  .lia {
+    font-size: 0.6rem;
+  }
+  .box-scaf {
+    position: relative;
+  }
+
+  .scaf {
+    position: absolute;
+    top: -5rem;
+    left: -8rem;
+  }
+
+  .scaff-img {
+    width: 2.5rem;
+    top: -5rem;
+    left: -1rem;
+  }
+}
+
+@media (max-width: 375px){
+  .projects h1 {
+    font-size: 3rem;
+  }
+  .box-repo {
+    margin-right: -1.5rem;
+  }
+  .box-repo p {
+    font-size: 1rem;
+  }
+  .img-repo {
+    margin-left: -2rem;
+    margin-top: 10rem;
+  }
+  .box2 {
+    padding-left: 0;
+  }
+  .box2-img {
+        width: 5rem;
+    }
+  .kona {
+        margin-left: 3rem;
+    }
+      .hands {
+        margin-right: -2rem;
+    }
+  .resume-link {
+    margin-top: 1.5rem;
+  }
+}
+
 .footer-color {
   background-color: black;
   margin-bottom: 5rem;
+  padding: 2rem 0; /* add vertical padding */
 }
+
 .footer {
-  text-align: center;          /* centers text & icons inside */
-  
+  text-align: center; /* centers text & icons */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; /* horizontal padding for smaller screens */
 }
+
 .footer h1 {
   color: white;
   padding-top: 3rem;
   font-size: 3rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 auto 1rem auto;
 }
+
+/* Footer icons */
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 1rem;                   /* space between icons */
+  flex-wrap: wrap; /* wrap icons on smaller screens */
+  gap: 1rem;       /* space between icons */
   margin: 1rem 0;
 }
+
 footer a {
   color: white;
 }
+
+/* Resume link */
 .resume-link {
   display: flex;
   justify-content: flex-end;
   padding-right: 3rem;
   padding-bottom: 1rem;
 }
+
 .resume-link a {
-  text-decoration: none;   /* removes the underline */
-  
+  text-decoration: none; /* removes underline */
+  color: white;
 }
+
+/* 📱 Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .footer h1 {
+    font-size: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .resume-link {
+    justify-content: center; /* move to center on smaller screens */
+    padding-right: 0;
+    margin-top: 2rem;
+  }
+}
+
+/* 📱 Mobile (≤768px) */
+@media (max-width: 768px) {
+  .footer h1 {
+    font-size: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .footer-icons {
+    gap: 0.8rem;
+  }
+
+  .resume-link a {
+    font-size: 0.9rem;
+  }
+}
+
+/* 📱 Small phones (≤480px) */
+@media (max-width: 480px) {
+  .footer-color{
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .footer h1 {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .footer-icons {
+    gap: 0.5rem;
+  }
+
+  .resume-link a {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 344px){
+  .resume-link {
+    margin-top: .5rem;
+  }
+}
+
