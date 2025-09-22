@@ -107,16 +107,45 @@ main {
     padding: 0 1rem;
   }
 }
-
+.image,
+.para,
+.why h1,
+.why p,
+.market h1,
+.market p,
+.solu h1,
+.solu p,
+.four,
+.user h1,
+.user p,
+.user-img,
+.screen h1,
+.screen-img,
+.image1,
+.screen p,
+.code,
+footer{
+  opacity: 0;
+  transform: translateX(3%); /* start off-screen to the right */
+  animation: slideIn 1s ease forwards;
+}
 .image {
     width: 19.69rem;
     height: auto;
     image-rendering: crisp-edges;
+    animation-delay: 0.2s;
+}
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .para {
     font-size: 1.5rem;
     font-weight: 400;
     font-style: normal;
+    animation-delay: 0.6s;
 }
 .why h1, .market h1, .solu h1, .user h1 {
     font-size: 2.5rem;
@@ -124,6 +153,54 @@ main {
 }
 .why p, .market p, .solu p, .user p, .screen p {
     font-size: 1.5rem;
+}
+.why h1{
+  animation-delay: 1s;
+}
+.why p {
+  animation-delay: 1.5s;
+}
+.market h1 {
+  animation-delay: 2s;
+}
+.market p {
+  animation-delay: 2.5s;
+}
+.solu h1 {
+  animation-delay: 3s;
+}
+.solu p {
+  animation-delay: 3.5s;
+}
+.four {
+  animation-delay: 4s;
+}
+.user h1 {
+  animation-delay: 4.5s;
+}
+.user p {
+  animation-delay: 5s;
+}
+.user-img {
+  animation-delay: 5.5s;
+}
+.screen h1 {
+  animation-delay: 6s;
+}
+.screen-img {
+  animation-delay: 6.5s;
+}
+.image1 {
+  animation-delay: 7.5s;
+}
+.screen p{
+  animation-delay: 8s;
+}
+.code {
+  animation-delay: 8.5s;
+}
+footer {
+  animation-delay: 9s;
 }
 .red {
     color: #C96B37;

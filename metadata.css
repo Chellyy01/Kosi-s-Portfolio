@@ -81,6 +81,7 @@ header ul li {
     font-size: 0.9rem;
   }
 }
+
 main {
     padding: 0 6rem;
 }
@@ -103,10 +104,53 @@ main {
     padding: 0 1rem;
   }
 }
+
+.meta img,
+.meta p,
+.what h1,
+.what p,
+.goal h1,
+.goal p,
+.scope h1,
+.scope p,
+.target h1,
+.target p,
+.feature h1,
+.feature p,
+.four,
+.system h1,
+.system p,
+.user h1,
+.user p,
+.user img,
+.user-img,
+.screen h1,
+.screen p,
+.imag,
+.image1,
+.image2,
+.img-kona1,
+.img-kona2,
+.img-kona3,
+.code,
+footer{
+  opacity: 0;
+  transform: translateX(3%); /* start off-screen to the right */
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .meta img {
   max-width: 100%;   /* ✅ Prevents image from overflowing its container */
   height: auto;      /* ✅ Keeps aspect ratio */
   display: block; 
+  animation-delay: 0.2s;
 }
 .what h1, .goal h1, .scope h1, .target h1, .feature h1, .system h1, .user h1, .screen h1 {
     font-size: 2.5rem;
@@ -115,6 +159,75 @@ main {
 
 .meta p, .what p, .goal p, .scope p, .target p, .feature p, .system p, .user p, .screen p {
     font-size: 1.5rem;
+}
+.meta p {
+  animation-delay: 0.6s;
+}
+.what h1 {
+  animation-delay: 1s;
+}
+.what p {
+  animation-delay: 1.5s;
+}
+.goal h1 {
+  animation-delay: 2s;
+}
+.goal p{
+  animation-delay: 2.5s;
+}
+.scope h1{
+  animation-delay: 3s;
+}
+.scope p {
+  animation-delay: 3.5s;
+}
+.target h1, .user-h h1{
+  animation-delay: 4s;
+}
+.target p, .user-h p {
+  animation-delay: 4.5s;
+}
+.feature h1, .user-img {
+  animation-delay: 5s;
+}
+.feature p {
+  animation-delay: 5.5s;
+}
+.four {
+  animation-delay: 6s;
+}
+.system h1{
+  animation-delay: 6.5s;
+}
+.system p {
+  animation-delay: 7s;
+}
+.flow h1{
+  animation-delay: 7.5s;
+}
+.flow img {
+  animation-delay: 8s;
+}
+.screen h1{
+  animation-delay: 8.5s;
+}
+.imag, .img-kona1 {
+  animation-delay: 9s;
+}
+.image1, .img-kona2 {
+  animation-delay: 10s;
+}
+.image2, .img-kona3 {
+  animation-delay: 11s;
+}
+.screen p {
+  animation-delay: 11.5s;
+}
+.code {
+  animation-delay: 12s;
+}
+footer {
+  animation-delay: 12.5s;
 }
 .red {
     color: #C96B37;
@@ -153,10 +266,10 @@ main {
     
   }
 .image1 {
-    margin-top: -9rem;
+    margin-top: 2rem;
 }
 .imag {
-    margin-top: -5rem;
+    margin-top: 2rem;
 }
 @media (max-width: 1024px) {
   .image1 {
