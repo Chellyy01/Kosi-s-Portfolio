@@ -1,0 +1,391 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #F0FFF5;
+}
+ /* Base (Desktop / Large screens) */
+header {
+  padding: 0 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* replaces margin-left for cleaner spacing */
+}
+
+header ul li {
+  list-style-type: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-family: 'Irish Grover', cursive;
+}
+
+/* --- Tablet screens --- */
+@media (max-width: 1024px) {
+  header {
+    padding: 0 2rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  header ul {
+    gap: 1.2rem;
+  }
+}
+
+/* --- Mobile screens --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    width: 100%;
+  }
+  header ul li {
+    margin-left: 0;
+  }
+}
+
+main {
+    padding: 0 6rem;
+}
+@media (max-width: 1024px) {
+  main {
+    padding: 0 4rem;
+  }
+}
+
+/* 📱 Mobile (≤768px) */
+@media (max-width: 768px) {
+  main {
+    padding: 0 2rem;
+  }
+}
+
+/* 📱 Small phones (≤480px) */
+@media (max-width: 480px) {
+  main {
+    padding: 0 1rem;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 100%;
+    animation-delay: 0.2s;
+}
+.heading,
+.problem h1,
+.problem p,
+.literature h1,
+.literature p,
+.competitive h1,
+.competitive p,
+.competitive img,
+.expert h1,
+.expert p,
+.user h1,
+.user p,
+.user-img1,
+.user-img2,
+.backcasting h1,
+.backcasting p,
+.back-img1,
+.back-img2,
+.back-img3,
+.second,
+.wireframing h1,
+.wireframing p,
+.wire-img1,
+.wire-img2, 
+.screen h1,
+.screen-img1,
+.screen-img2,
+.screen p,
+.code,
+.slide5 {
+  opacity: 0;
+  transform: translateX(3%); /* start off-screen to the right */
+  animation: slideIn 1s ease forwards;
+}
+.heading img {
+    width: 3rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+h1 {
+    margin-top: 3rem;
+}
+@media (max-width: 1064px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* 📱 Mobile (≤768px) */
+@media (max-width: 855px) {
+  .head {
+    font-size: 2rem;
+  }
+  h1 {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* 📱 Small phones (≤480px) */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+  h1 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.problem h1 {
+    animation-delay: 0.6s;
+}
+.problem p {
+    animation-delay: 1s;
+}
+.literature h1 {
+    animation-delay: 1.5s;
+}
+.literature p {
+    animation-delay: 2s;
+}
+
+.competitive h1 {
+    animation-delay: 2.5s;
+}
+.competitive p {
+    animation-delay: 3s;
+}
+.competitive img {
+    animation-delay: 3.5s;
+}
+.expert h1 {
+    animation-delay: 4s;
+}
+.expert p {
+    animation-delay: 4.5s;
+}
+.user h1 {
+    animation-delay: 5s;
+}
+.user p {
+    animation-delay: 5.5s;
+}
+.user-img1 {
+    animation-delay: 6s;
+}
+.user-img2 {
+    animation-delay: 6.5s;
+}
+.backcasting h1 {
+    animation-delay: 7s;
+}
+.backcasting p {
+    animation-delay: 7.5s;
+}
+.back-img1 {
+    animation-delay: 8s;
+}
+.back-img2 {
+    animation-delay: 8.5s;
+}
+.back-img3 {
+    animation-delay: 9s;
+}
+.second {
+    animation-delay: 9.5s;
+}
+.wireframing h1 {
+    animation-delay: 10s;
+}
+.wireframing p {
+    animation-delay: 10.5s;
+}
+.wire-img1 {
+    animation-delay: 11s;
+}
+.wire-img2 {
+    animation-delay: 11.5s;
+}
+.screen h1 {
+    animation-delay: 12s;
+}
+.screen-img1 {
+    animation-delay: 12.5s;
+}
+.screen-img2 {
+    animation-delay: 13s;
+}
+.screen p {
+    animation-delay: 13.5s;
+}
+.code {
+    animation-delay: 14s;
+}
+.slide5 {
+    animation-delay: 14.5s;
+}
+
+main img {
+  display: block;
+  margin: 0 auto; /* centers horizontally */
+  max-width: 100%; /* keeps images responsive */
+  height: auto;
+  margin-top: 2rem;
+}
+
+/* Exclude the image inside .head */
+.heading img {
+  display: inline;   /* keep it inline with the text */
+  margin: 0;         /* no centering */
+  vertical-align: middle; /* aligns nicely with text */
+}
+.red {
+    color: #C96B37;
+}
+
+.footer-color {
+  background-color: black;
+  margin-bottom: 5rem;
+  padding: 2rem 0; /* add vertical padding */
+  margin-top: 3rem;
+}
+
+.footer {
+  text-align: center; /* centers text & icons */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; /* horizontal padding for smaller screens */
+}
+
+.footer h1 {
+  color: white;
+  padding-top: 2rem;
+  font-size: 3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 auto 1rem auto;
+}
+
+/* Footer icons */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* wrap icons on smaller screens */
+  gap: 1rem;       /* space between icons */
+  margin: 1rem 0;
+}
+
+footer a {
+  color: white;
+}
+
+/* Resume link */
+.resume-link {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+  padding-bottom: 1rem;
+}
+
+.resume-link a {
+  text-decoration: none; /* removes underline */
+  color: white;
+}
+
+/* 📱 Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .footer h1 {
+    font-size: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .resume-link {
+    justify-content: center; /* move to center on smaller screens */
+    padding-right: 0;
+    margin-top: 2rem;
+  }
+}
+
+/* 📱 Mobile (≤768px) */
+@media (max-width: 768px) {
+  .footer h1 {
+    font-size: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .footer-icons {
+    gap: 0.8rem;
+  }
+
+  .resume-link a {
+    font-size: 0.9rem;
+  }
+}
+
+/* 📱 Small phones (≤480px) */
+@media (max-width: 480px) {
+  .footer-color{
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .footer h1 {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .footer-icons {
+    gap: 0.5rem;
+  }
+
+  .resume-link a {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 344px){
+  .resume-link {
+    margin-top: .5rem;
+  }
+}
