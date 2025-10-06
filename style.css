@@ -617,7 +617,7 @@ header ul li {
   }
   .kona {
     margin-top: 1rem;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
   }
   .kona .para {
     font-size: 1rem;
@@ -640,13 +640,13 @@ header ul li {
   .scaf {
     position: absolute;
     top: -5rem;
-    left: -8rem;
+    left: -9rem;
   }
 
   .scaff-img {
     width: 2.5rem;
     top: -5rem;
-    left: -1rem;
+    left: 1rem;
   }
 }
 
