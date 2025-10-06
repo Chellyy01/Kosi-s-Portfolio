@@ -4,6 +4,12 @@ body {
 header {
   padding: 0 4rem;
   margin-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #F0FFF5; /* keeps the same background as body */
+  z-index: 1000;
 }
 
 header,
@@ -64,25 +70,26 @@ header ul li {
 }
 
 main {
-    padding: 0 6rem;
+    padding: 8rem 6rem 0;
 }
+
 @media (max-width: 1024px) {
   main {
-    padding: 0 4rem;
+    padding: 12rem 4rem 0;
   }
 }
 
 /* 📱 Mobile (≤768px) */
 @media (max-width: 768px) {
   main {
-    padding: 0 2rem;
+    padding: 12rem 2rem 0;
   }
 }
 
 /* 📱 Small phones (≤480px) */
 @media (max-width: 480px) {
   main {
-    padding: 0 1rem;
+    padding: 12rem 1rem 0;
   }
 }
 

@@ -10,6 +10,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #F0FFF5; /* keeps the same background as body */
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 header ul {
@@ -66,6 +73,11 @@ header ul li {
     margin-left: 0;
   }
 }
+
+main {
+  padding: 8rem 0; /* top padding to create space for fixed header */
+}
+
 
 .hero-section {
   background-color: #f7ece6;
