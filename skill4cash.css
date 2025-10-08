@@ -208,7 +208,7 @@ footer {
   align-items: center;    /* center text vertically if short */
   justify-content: center; /* center text horizontally */
   background-color: #fff;
-  flex: 0 1 auto;         /* allows growth if content exceeds box */
+  flex: 0 1 auto;         
   box-sizing: border-box;
   white-space: nowrap;
   font-size: 1rem;
