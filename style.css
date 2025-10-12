@@ -6,7 +6,7 @@ body {
 }
  /* Base (Desktop / Large screens) */
 header {
-  padding: 0 6rem;
+  padding: 0 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,7 +55,6 @@ header ul li {
 /* --- Mobile screens --- */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
   }
@@ -71,6 +70,7 @@ header ul li {
     align-items: flex-start;
     gap: 0.8rem;
     margin-right: 2rem;
+    margin-top: 0;
     /* ---width: 100%;--- */
   }
   header ul li {
@@ -214,37 +214,43 @@ main {
     font-size: 1.8rem;
   }
 }
+
 .content-area {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns */
+  grid-template-rows: auto auto; /* two rows */
+  align-items: start;
   justify-content: space-between;
-  padding: 2rem 5rem;
+  padding: 4rem 5rem;
   gap: 5rem;
 }
 
+/* Optional: give each section some spacing or alignment */
+.intro, .more, .worked, .listItems {
+  padding: 1rem;
+  margin-top: -4rem;
+}
+
 .intro {
-  gap: 2rem;
   font-size: 2.5rem;
-  display: flex;
-  flex-direction: column;
   animation-delay: 1.5s;
+}
+
+.more {
+  animation-delay: 2s;
 }
 
 .worked {
   font-size: 2.8rem;
   animation-delay: 2.5s;
+  margin-top: -2rem;
 }
 
-.more {
-  gap: 2rem;
-  display: flex;
-  flex-direction: column;
-  animation-delay: 2s;
-}
-
+/*
 .intro,
 .more {
   width: 50%; /* ✅ Always 2 columns by default */
-}
+
 
 .more p,
 .items span {
@@ -262,7 +268,7 @@ main {
 
 /* 📱 Tablets (≤ 1024px) */
 @media (max-width: 1024px) {
-  .content-area {
+ /* .content-area {
     flex-direction: column;
     padding: 2rem 3rem;
     gap: 3rem;
@@ -271,22 +277,18 @@ main {
   .intro,
   .more {
     width: 100%; /* ✅ Full width when stacked */
-  }
-
-  /* ✅ Move .worked below .more */
-  .more {
-    order: 1;
+  
+  .content-area {
+    grid-template-columns: 1fr; /* single column on mobile */
+    grid-template-rows: auto;
   }
 
   .worked {
-    order: 2; 
     align-self: flex-start; /* Keep it aligned left */
     font-size: 2.2rem;
-    margin-top: 1rem;
   }
 
   .intro {
-    order: 0;
     font-size: 2rem;
   }
 
@@ -699,7 +701,6 @@ main {
 
 .footer-color {
   background-color: black;
-  margin-bottom: 5rem;
   padding: 2rem 0; /* add vertical padding */
 }
 

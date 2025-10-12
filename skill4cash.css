@@ -51,7 +51,6 @@ header ul li {
 /* --- Mobile screens --- */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
   }
@@ -67,6 +66,7 @@ header ul li {
     align-items: flex-start;
     gap: 0.8rem;
     margin-right: 2rem;
+    margin-top: 0;
     /* ---width: 100%;--- */
   }
   header ul li {
@@ -267,7 +267,6 @@ footer {
 }
 .footer-color {
   background-color: black;
-  margin-bottom: 5rem;
   padding: 2rem 0; /* add vertical padding */
 }
 
