@@ -284,7 +284,7 @@ footer {
   .image1 {
     margin-top: 1rem;
 }
-p {
+  .meta p, .what p, .goal p, .scope p, .target p, .feature p, .system p, .user p, .screen p {
     font-size: 1.2rem;
   }
 }

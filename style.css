@@ -168,9 +168,9 @@ main {
     height: 18rem;
     border-top-left-radius: 8rem;
   }
-  .hero-section img {
+ /* .hero-section img {
   height: 22rem;
-}
+}*/
   .hero-section h1 {
     font-size: 3.5rem;
     bottom: -4rem;
@@ -481,6 +481,7 @@ main {
 .kona-img {
   position: relative;
   z-index: 1;
+/*  top: 1.5rem; */
 }
 .box-color {
   background-color: #2D2D2D;
@@ -540,8 +541,19 @@ main {
   .kona {
     left: -3rem;
   }
-
-
+  .phone {
+    width: 7rem;
+  }
+  .small {
+    height: 9rem;
+  }
+  .box2-img {
+    height: 12rem;
+  }
+  .kona-img {
+    right: -4rem;
+    top: 4rem;
+  }
 }
 /* 📱 Tablets (≤1024px) */
 @media (max-width: 1174px) {
@@ -550,13 +562,45 @@ main {
     gap: 1.5rem;
   }
 
+  .box-repo {
+    margin-left: 1rem;
+    
+  }
+
+  .img-repo {
+    margin-top: 10rem;
+    margin-left: -5rem;
+  }
 
   .para {
     font-size: 0.8rem;
   }
 
+  .box2 {
+    gap: .5rem;
+  }
+
+  .lap {
+    width: 13rem;
+  }
+
   .kona {
     left: -3rem;
+    margin-left: 5rem;
+    top: -3rem;
+    
+  }
+
+  .kona-img {
+    right: -1rem;
+  }
+
+  .scaf {
+    left: 1rem;
+  }
+
+  .scaff-img {
+    left: 12rem;
   }
 
   .hands {
@@ -566,9 +610,7 @@ main {
 
 /* 📱 Mobile (≤768px) */
 @media (max-width: 768px) {
-  .projects h1 {
-    padding-left: 2rem;
-  }
+  
   .p-container {
     padding: 1.5rem;
     gap: 1rem;
@@ -584,7 +626,6 @@ main {
     width: 7rem;
   }
 
-  
 
   .para {
     font-size: 1rem;
@@ -620,18 +661,19 @@ main {
     width: 6rem;
   }
   .small {
-    width: 8rem;
+    width: 12rem;
   }
   .box2-img {
-    height: 9rem;
-    width: 6rem;
+    height: 10rem;
+    width: 4rem;
+    margin-right: 2rem;
   }
   .title-icon img {
     width: 5rem;
   }
   .hands {
     width: 15rem;
-    margin-right: -4rem;
+    margin-right: -2rem;
   }
   .kona {
     margin-top: 1rem;
@@ -639,6 +681,10 @@ main {
   }
   .kona .para {
     font-size: 1rem;
+  }
+  .kona-img {
+    right: -1rem;
+    top: 4rem;
   }
   .tool {
     margin-top: 1rem;
@@ -671,6 +717,7 @@ main {
 @media (max-width: 375px){
   .projects h1 {
     font-size: 3rem;
+    padding-left: 0;
   }
   .box-repo {
     margin-right: -1.5rem;
@@ -682,17 +729,21 @@ main {
     margin-left: -2rem;
     margin-top: 10rem;
   }
+  .small {
+    width: 13rem;
+  }
   .box2 {
     padding-left: 0;
   }
   .box2-img {
-        width: 5rem;
+        width: 4rem;
+        margin-right: -.5rem;
     }
   .kona {
         margin-left: 3rem;
     }
       .hands {
-        margin-right: -2rem;
+        margin-left: -4rem;
     }
   .resume-link {
     margin-top: 1.5rem;
