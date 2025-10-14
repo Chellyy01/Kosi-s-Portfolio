@@ -289,6 +289,12 @@ footer {
   }
 }
 
+@media (max-width: 370px) {
+  .box {
+    font-size: .70rem;
+  }
+}  
+
 .img-kona {
     margin-top: 5rem;
 }
