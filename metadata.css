@@ -267,6 +267,9 @@ footer {
   .image1 {
     margin-top: 1rem;
 }
+   .box {
+    font-size: .89rem;
+  }
 }
 
 /* 📱 Mobile (≤768px) */
