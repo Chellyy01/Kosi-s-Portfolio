@@ -115,7 +115,7 @@ main {
   position: absolute;
   left: 0;
   bottom: 0;
-  top: -4rem;
+  top: -8.4rem;
   max-width: 100%;
   height: auto;
   
@@ -135,7 +135,7 @@ main {
 
 /* Gradient Span */
 .kosi span {
-  background: linear-gradient(to top, black 0%, black 40%, white 100%);
+  background: linear-gradient(to top, black 0%, white 40%, white 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -179,6 +179,20 @@ main {
     font-size: 2rem;
     bottom: -6rem;
   }
+  .title span {
+  background: linear-gradient(to top, black 0%, white 40%, white 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.kosi span {
+  background: linear-gradient(to top, black 0%, black 40%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 }
 
 /* Mobile (≤768px) */
@@ -207,6 +221,14 @@ main {
     font-size: 1.5rem;
     margin-top: 0.5rem;
   }
+  .title span {
+  background: linear-gradient(to top, black 0%, black 40%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 }
 
 @media (max-width: 394px) {
