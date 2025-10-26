@@ -87,7 +87,7 @@ main {
   background-color: #f7ece6;
   margin: 5rem;
   position: relative;
-  height: 22rem;
+  height: 23.4rem;
   border-top-left-radius: 12rem;
   
  
@@ -165,7 +165,8 @@ main {
 @media (max-width: 1137px) {
   .hero-section {
     margin: 4rem 2rem;
-    padding-left: 4rem;
+    padding-left: 3rem;
+    
   /*  height: 18rem;
     border-top-left-radius: 8rem;*/
   }
@@ -244,59 +245,108 @@ main {
 }
 
 @media (max-width: 608px) {
+  .hero-section {
+    margin: 5rem 0rem;
+    height: 23.7rem;
+    padding-left: 2rem;
+  }
  .hero-section img {
-    top: -7.3rem;
+    top: -8rem;
     left: -2.2rem;
  }
+ .hero-section h1 {
+    bottom: 9rem;
+    background: none; 
+    font-size: 2rem;
+  }
+  .hero-section h2 {
+    bottom: 10rem;
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width: 458px) {
   .hero-section {
-    height: 15rem;
+    height: 19rem;
   }
  .hero-section img {
-    top: -5.5rem;
+    top: -6.5rem;
     left: -1rem;
  }
  .hero-section h1 {
-    font-size: 1.5rem;
-    bottom: 9rem;
+    font-size: 1.8rem;
+    bottom: 7rem;
   }
   .hero-section h2 {
-    bottom: 10rem;
+    bottom: 8rem;
+    font-size: 1.5rem;
   }
 }
 
+@media (max-width: 417px) {
+  .hero-section {
+    height: 18rem;
+    margin-bottom: 4rem;
+    padding-left: 1rem;
+  }
+}
 @media (max-width: 394px) {
+  .hero-section {
+    height: 17rem;
+  }
   .hero-section img {
-    top: -4.8rem;
+    top: -5.9rem;
     left: -1rem;
  }
  .hero-section h1 {
-    bottom: 8rem;
+    bottom: 6.5rem;
   }
   .hero-section h2 {
-    bottom: 9rem;
+    bottom: 7rem;
   }
 }
+
+@media (max-width: 375px) {
+  .hero-section {
+    height: 16.2rem;
+  }  
+  .hero-section h1 {
+    bottom: 6rem;
+  }
+  .hero-section h2 {
+    bottom: 7rem;
+  }
+}
+
 @media (max-width: 370px) {
+  .hero-section {
+    height: 15.6rem;
+  }  
   .hero-section img {
-    top: -4.5rem;
+    top: -5.4rem;
     left: -.5rem;
  }
-  .hero-section h2 {
-    font-size: 1.5rem;
-  }
+  
 }
+
 
 @media (max-width: 349px) {
   .hero-section img {
-    top: -4rem;
+    top: -5rem;
     left: -.5rem;
  }
-
+ .hero-section {
+    height: 14.9rem;
+    padding-left: 1rem;
+  }  
+  .hero-section h1 {
+    bottom: 5.5rem;
+    font-size: 1.5rem;
+  }
+  .hero-section h2 {
+    bottom: 6.5rem;
 }
-
+}
 .content-area {
   display: grid;
   grid-template-columns: 1fr 1fr; /* two columns */
@@ -309,7 +359,6 @@ main {
 
 /* Optional: give each section some spacing or alignment */
 .intro, .more, .worked, .listItems {
-  padding: 1rem;
   margin-top: -4rem;
 }
 
@@ -364,7 +413,7 @@ main {
     grid-template-columns: 1fr; /* single column on mobile */
     grid-template-rows: auto;
     padding: 5rem 5rem;
-    gap: 1rem;
+    gap: 2rem;
     
   }
 
@@ -387,8 +436,8 @@ main {
 @media (max-width: 768px) {
   .content-area {
     padding: 2rem;
-    padding-top: 5rem;
-    gap: 2rem;
+    padding-top: 4rem;
+    gap: 3rem;
   }
 
   .intro {
@@ -425,7 +474,28 @@ main {
   }
 
   .content-area {
-    padding: 4rem 1.5rem;
+    padding: 6rem 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .content-area {
+    padding: 4.7rem 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .content-area {
+    padding: 8rem 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media (max-width: 360px) {
+  .content-area {
+    padding:5rem 1rem;
+    padding-bottom: 1rem;
   }
 }
 .slide1 {
