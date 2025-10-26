@@ -56,7 +56,7 @@ header ul li {
 @media (max-width: 768px) {
   header {
     align-items: flex-start;
-    padding: 1rem;
+    padding: 0rem 1rem;
   }
   .logo {
     font-size: 1.5rem;
@@ -164,13 +164,15 @@ main {
 /* Tablet (≤1024px) */
 @media (max-width: 1137px) {
   .hero-section {
-    margin: 3rem 2rem;
-    height: 18rem;
-    border-top-left-radius: 8rem;
+    margin: 4rem 2rem;
+    padding-left: 4rem;
+  /*  height: 18rem;
+    border-top-left-radius: 8rem;*/
   }
  /* .hero-section img {
   height: 22rem;
 }*/
+  
   .hero-section h1 {
     font-size: 3.5rem;
     bottom: -4rem;
@@ -180,14 +182,14 @@ main {
     bottom: -6rem;
   }
   .title span {
-  background: linear-gradient(to top, black 0%, white 40%, white 100%);
+  background: linear-gradient(to top, black 0%, black 40%, black 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
 .kosi span {
-  background: linear-gradient(to top, black 0%, black 40%, black 100%);
+  background: linear-gradient(to top, black 0%, white 40%, white 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -197,30 +199,41 @@ main {
 
 /* Mobile (≤768px) */
 @media (max-width: 768px) {
-  .hero-section {
-    margin: 2rem 1rem;
-    height: auto; /* adjusts height to content */
-    border-top-left-radius: 5rem;
-    padding: 2rem 1rem;
-  }
+ .hero-section {
+    /*margin: 2rem 1rem;
+    height: auto; /* adjusts height to content /
+    border-top-left-radius: 5rem;*/
+    padding-left: 1rem;
+  } 
   .hero-section img {
     position: relative;
-    top: 0;
+    left: -7rem;
     margin: 0 auto;
     display: block;
   }
   .hero-section h1 {
     position: relative;
-    bottom: 0;
+    bottom: 12.5rem;
     font-size: 2.5rem;
     margin-top: 1rem;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.253) 0%, #f7ece6 40%, #f7ece6 100%);
+     -webkit-background-clip: content-box;
+  -webkit-text-fill-color: black;
+  background-clip: content-box;
   }
   .hero-section h2 {
     position: relative;
-    bottom: 0;
-    font-size: 1.5rem;
+    bottom: 14rem;
+    font-size: 1.8rem;
     margin-top: 0.5rem;
   }
+  .kosi span {
+  background: linear-gradient(to top, black 0%, black 40%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
   .title span {
   background: linear-gradient(to top, black 0%, black 40%, black 100%);
   -webkit-background-clip: text;
@@ -228,13 +241,60 @@ main {
   background-clip: text;
   color: transparent;
 }
+}
 
+@media (max-width: 608px) {
+ .hero-section img {
+    top: -7.3rem;
+    left: -2.2rem;
+ }
+}
+
+@media (max-width: 458px) {
+  .hero-section {
+    height: 15rem;
+  }
+ .hero-section img {
+    top: -5.5rem;
+    left: -1rem;
+ }
+ .hero-section h1 {
+    font-size: 1.5rem;
+    bottom: 9rem;
+  }
+  .hero-section h2 {
+    bottom: 10rem;
+  }
 }
 
 @media (max-width: 394px) {
-  .hero-section h1 {
-    font-size: 1.8rem;
+  .hero-section img {
+    top: -4.8rem;
+    left: -1rem;
+ }
+ .hero-section h1 {
+    bottom: 8rem;
   }
+  .hero-section h2 {
+    bottom: 9rem;
+  }
+}
+@media (max-width: 370px) {
+  .hero-section img {
+    top: -4.5rem;
+    left: -.5rem;
+ }
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 349px) {
+  .hero-section img {
+    top: -4rem;
+    left: -.5rem;
+ }
+
 }
 
 .content-area {
@@ -303,6 +363,9 @@ main {
   .content-area {
     grid-template-columns: 1fr; /* single column on mobile */
     grid-template-rows: auto;
+    padding: 5rem 5rem;
+    gap: 1rem;
+    
   }
 
   .worked {
@@ -324,6 +387,7 @@ main {
 @media (max-width: 768px) {
   .content-area {
     padding: 2rem;
+    padding-top: 5rem;
     gap: 2rem;
   }
 
@@ -361,7 +425,7 @@ main {
   }
 
   .content-area {
-    padding: 1.5rem;
+    padding: 4rem 1.5rem;
   }
 }
 .slide1 {
