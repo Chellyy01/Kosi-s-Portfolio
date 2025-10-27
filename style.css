@@ -135,11 +135,20 @@ main {
 
 /* Gradient Span */
 .kosi span {
-  background: linear-gradient(to top, black 0%, white 40%, white 100%);
+  background: linear-gradient(to top, black 0%, black 40%, white 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+@media (min-width: 1137px) {
+  .kosi .black-h {
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: black;
+    color: black;
+  }
 }
 
 /* Subheading */
@@ -190,12 +199,13 @@ main {
   color: transparent;
 }
 .kosi span {
-  background: linear-gradient(to top, black 0%, white 40%, white 100%);
+  background: linear-gradient(to top, black 0%, black 40%, white 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
+
 }
 
 /* Mobile (≤768px) */
