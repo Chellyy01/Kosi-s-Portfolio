@@ -302,7 +302,7 @@ main {
     bottom: 6.5rem;
   }
   .hero-section h2 {
-    bottom: 7rem;
+    bottom: 8rem;
   }
 }
 
@@ -481,7 +481,7 @@ main {
 
 @media (max-width: 430px) {
   .content-area {
-    padding: 4.7rem 1rem;
+    padding: 5rem 1rem;
     padding-bottom: 1rem;
   }
 }
